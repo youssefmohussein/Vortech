@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vortech Studio — We Build. We Secure. We Ship.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-grid"></div>
+    <div class="loader-scan"></div>
+
+    <div class="hud-corner hud-tl">
+      <span class="hud-lbl">SYS_INIT</span>
+      <span class="hud-val">VORTECH.SYS</span>
+    </div>
+    <div class="hud-corner hud-tr">
+      <span class="hud-lbl">BUILD</span>
+      <span class="hud-val">v2.5.1</span>
+    </div>
+    <div class="hud-corner hud-bl">
+      <span class="hud-lbl">LOCATION</span>
+      <span class="hud-val">CAIRO · EG</span>
+    </div>
+    <div class="hud-corner hud-br">
+      <span class="hud-lbl">STATUS</span>
+      <span class="hud-val" id="hud-status">BOOTING</span>
+    </div>
+
+    <div class="loader-body">
+      <div class="loader-logo-wrap" id="loader-logo-wrap">
+        <span id="loader-logo-text"></span><span class="loader-logo-dot" id="loader-logo-dot" style="opacity:0">.</span>
+        <span class="loader-caret" id="loader-caret">_</span>
+      </div>
+      <div class="loader-msgs" id="loader-msgs"></div>
+      <div class="loader-bar-outer">
+        <div class="loader-bar-fill" id="loader-bar-fill"></div>
+      </div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-left">
+      <a href="#hero" class="nav-logo">Vortech<span>.</span></a>
+      <div class="nav-available"><span class="nav-dot"></span>Available</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Let's talk →</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mobile-cta">Let's talk →</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-scan-line"></div>
+
+    <!-- HUD corners -->
+    <div class="hero-hud hero-hud-tl">
+      <span class="hero-hud-lbl">SYS</span>
+      <span class="hero-hud-val">VORTECH.STUDIO</span>
+    </div>
+    <div class="hero-hud hero-hud-tr">
+      <span class="hero-hud-lbl">BUILD</span>
+      <span class="hero-hud-val">v2.5.1</span>
+    </div>
+    <div class="hero-hud hero-hud-bl">
+      <span class="hero-hud-lbl">LOCATION</span>
+      <span class="hero-hud-val">CAIRO · EG</span>
+    </div>
+    <div class="hero-hud hero-hud-br">
+      <span class="hero-hud-lbl">SESSION</span>
+      <span class="hero-hud-val" id="hero-uptime">00:00:00</span>
+    </div>
+
+    <!-- Content grid -->
+    <div class="hero-content-grid">
+
+      <!-- Left: headline -->
+      <div class="hero-left">
+        <p class="hero-eyebrow">Cairo, Egypt · Est. 2025</p>
+        <h1 class="hero-headline">
+          We
+          <span class="hero-rotating-wrap">
+            <span class="hero-rotating">
+              <span>build.</span>
+              <span>secure.</span>
+              <span>ship.</span>
+            </span>
+          </span>
+          <br />
+          <span class="line2">Digital products</span><br />
+          that matter.
+        </h1>
+        <p class="hero-sub">
+          A two-person studio combining <strong>full-stack engineering</strong> and <strong>UI craft</strong> to build
+          fast, secure, and beautiful web products for ambitious businesses.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">See our work →</a>
+          <a href="#contact" class="btn-ghost">Start a project</a>
+        </div>
+      </div>
+
+      <!-- Right: terminal status panel -->
+      <div class="hero-panel">
+        <div class="hero-panel-hdr">
+          <div class="hero-panel-dots">
+            <span style="background:#FF5F56"></span>
+            <span style="background:#FFBD2E"></span>
+            <span style="background:#27C93F"></span>
+          </div>
+          <span class="hero-panel-title">STUDIO.STATUS</span>
+        </div>
+        <div class="hero-panel-body">
+          <div class="hero-stat-row">
+            <span class="hero-stat-lbl">Projects shipped</span>
+            <span class="hero-stat-val">06</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-row">
+            <span class="hero-stat-lbl">Certifications</span>
+            <span class="hero-stat-val">08</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-row">
+            <span class="hero-stat-lbl">Team size</span>
+            <span class="hero-stat-val">02</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-row">
+            <span class="hero-stat-lbl">Location</span>
+            <span class="hero-stat-val">Cairo</span>
+          </div>
+          <div class="hero-panel-section-lbl">STACK</div>
+          <div class="hero-stack-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span>
+            <span>Python</span><span>Linux</span><span>Security</span>
+            <span>AWS</span><span>Figma</span><span>Tailwind</span>
+          </div>
+          <div class="hero-panel-status">
+            <span class="hero-status-dot"></span>
+            <span>Available for projects</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header reveal">
+      <div>
+        <div class="section-label">What we do</div>
+        <h2 class="services-title">Three things,<br />done <em>right.</em></h2>
+      </div>
+      <p class="services-desc">We don't do everything. We do these three things at a level most studios can't match.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M3 9h18M9 21V9" />
+          </svg>
+        </div>
+        <h3 class="service-name">Web Applications</h3>
+        <p class="service-text">Full-stack web apps built on the MERN stack. From landing pages to complex dashboards —
+          fast, responsive, and built to scale.</p>
+        <div class="service-tags">
+          <span class="stag">React</span><span class="stag">Node.js</span><span class="stag">MongoDB</span><span
+            class="stag">REST APIs</span><span class="stag">JWT Auth</span>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M8 21H5a2 2 0 0 0-2-2v-3M21 16v3a2 2 0 0 1-2 2h-3" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+        </div>
+        <h3 class="service-name">Automation & Scripts</h3>
+        <p class="service-text">Python scripts that eliminate repetitive work — automated reports, data pipelines,
+          scheduled tasks, scraping, and WhatsApp/email notifications.</p>
+        <div class="service-tags">
+          <span class="stag">Python</span><span class="stag">Bash</span><span class="stag">Linux</span><span
+            class="stag">Cron Jobs</span><span class="stag">APIs</span>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <h3 class="service-name">UI/UX & Branding</h3>
+        <p class="service-text">User interfaces that feel effortless and look premium. We craft responsive web layouts,
+          custom design systems, and cohesive brand identities that captivate users.</p>
+        <div class="service-tags">
+          <span class="stag">Figma</span><span class="stag">UI/UX Design</span><span class="stag">Design
+            Systems</span><span class="stag">Branding</span><span class="stag">Wireframing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="work-header reveal">
+      <div class="section-label">Selected work</div>
+      <h2 class="work-title">Projects we're<br /><em>proud of.</em></h2>
+      <p class="work-sub">Real systems, real deployments. Here's what we've built.</p>
+    </div>
+    <div class="work-grid">
+
+      <!-- Featured project -->
+      <div class="project-card featured reveal">
+        <div class="project-img">
+          <div class="project-mock">
+            <div class="mock-bar">
+              <div class="mock-dot" style="background:#FF5F56"></div>
+              <div class="mock-dot" style="background:#FFBD2E"></div>
+              <div class="mock-dot" style="background:#27C93F"></div>
+            </div>
+            <div class="mock-content">
+              <div class="mock-line mock-lime" style="width:40%"></div>
+              <div class="mock-line" style="width:70%"></div>
+              <div class="mock-line" style="width:55%"></div>
+              <div class="mock-block">
+                <div class="mock-card-sm"></div>
+                <div class="mock-card-sm"></div>
+                <div class="mock-card-sm"></div>
+                <div class="mock-card-sm"></div>
+              </div>
+              <div class="mock-line" style="width:80%;margin-top:4px"></div>
+              <div class="mock-line mock-lime" style="width:30%;height:28px;margin-top:4px;border-radius:0"></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="ptag lime">Featured</span>
+            <span class="ptag">React</span>
+            <span class="ptag">Node.js</span>
+            <span class="ptag">MongoDB</span>
+            <span class="ptag">JWT</span>
+          </div>
+          <h3 class="project-name">Secure E-Commerce Platform</h3>
+          <p class="project-desc">Full-stack MERN e-commerce with role-based JWT authentication, protected routes,
+            backend input validation, and RESTful API architecture.</p>
+          <a href="#" class="project-link">View project →</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-img">
+          <div class="video-mock">
+            <div class="mock-bar">
+              <div class="mock-dot" style="background:#FF5F56"></div>
+              <div class="mock-dot" style="background:#FFBD2E"></div>
+              <div class="mock-dot" style="background:#27C93F"></div>
+            </div>
+            <div class="video-mock-screen">
+              <video src="Videos/unilink.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="ptag">Cisco</span>
+            <span class="ptag">Red Hat</span>
+            <span class="ptag">Linux</span>
+          </div>
+          <h3 class="project-name">Enterprise IT Infrastructure</h3>
+          <p class="project-desc">Simulated enterprise network with VLAN segmentation, EtherChannel, STP, secured Linux
+            web servers, and controlled penetration testing.</p>
+          <a href="#" class="project-link">View project →</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-img">
+          <div class="video-mock">
+            <div class="mock-bar">
+              <div class="mock-dot" style="background:#FF5F56"></div>
+              <div class="mock-dot" style="background:#FFBD2E"></div>
+              <div class="mock-dot" style="background:#27C93F"></div>
+            </div>
+            <div class="video-mock-screen">
+              <video src="Videos/Velora.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="ptag">Node.js</span>
+            <span class="ptag">Express</span>
+            <span class="ptag">MongoDB</span>
+            <span class="ptag">EJS</span>
+            <span class="ptag">i18n</span>
+          </div>
+          <h3 class="project-name">Velora Jewelry Store</h3>
+          <p class="project-desc">A premium, bilingual (English/Arabic) e-commerce platform for high-end jewelry.
+            Implements secure session-based authentication, dynamic localized routing, robust catalog filtering, secure
+            order tracking, and a comprehensive admin control panel.</p>
+          <a href="https://github.com/youssefmohussein/Jewelry-final-website" class="project-link" target="_blank">View
+            project →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-header reveal">
+      <div class="section-label">The team</div>
+      <h2 class="about-title">Two builders,<br />one <em>vision.</em></h2>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-avatar"><img src="Images/youssefmo.jpg" alt="Youssef Mohamed" /></div>
+        <h3 class="team-name">Youssef Mohamed</h3>
+        <p class="team-role">Backend · Security · Systems</p>
+        <p class="team-bio">CS undergraduate at MIU with deep hands-on experience in Backend development, Linux
+          systems administration, and cybersecurity. Thinks in systems, builds for the long term. Try to do more than what is expected and secured.</p>
+        <div class="team-skills">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Linux / Red Hat</span>
+          <span class="skill-tag">Network </span>
+          <span class="skill-tag">Pen Testing</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">+more</span>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-avatar"><img src="Images/youssefah.jpg" alt="Youssef Mohamed" /></div>
+        <h3 class="team-name">Youssef Ahmed</h3>
+        <p class="team-role">Frontend · UI/UX · Branding </p>
+        <p class="team-bio">CS undergraduate at MIU with deep hands-on experience in Frontend engineer with a sharp eye for design and interaction. Turns complex requirements
+          into interfaces that feel effortless. Obsessed with the details that make products memorable.</p>
+        <div class="team-skills">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Framer Motion</span>
+          <span class="skill-tag">UI Design</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">+more</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-strip reveal">
+      <div class="stat-item">
+        <div class="stat-num counting" data-target="6">0</div>
+        <div class="stat-lbl">Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num counting" data-target="8">0</div>
+        <div class="stat-lbl">Certifications</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num counting" data-target="5">0</div>
+        <div class="stat-lbl">Technologies</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" style="font-size:28px;padding-top:8px">Cairo</div>
+        <div class="stat-lbl">Egypt</div>
+      </div>
+    </div>
+
+    <div class="tools-strip reveal">
+      <p class="tools-label">Technologies we use</p>
+      <div class="tools-list">
+        <span class="tool-badge">React</span>
+        <span class="tool-badge">Node.js</span>
+        <span class="tool-badge">MongoDB</span>
+        <span class="tool-badge">Python</span>
+        <span class="tool-badge">Linux / RHEL</span>
+        <span class="tool-badge">Tailwind CSS</span>
+        <span class="tool-badge">Git / GitHub</span>
+        <span class="tool-badge">SQL</span>
+        <span class="tool-badge">PHP </span>
+        <span class="tool-badge">JavaScript </span>
+        <span class="tool-badge">Cisco / Packet Tracer</span>
+        <span class="tool-badge">Vercel</span>
+        <span class="tool-badge">Postman</span>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="process-header reveal">
+      <div class="section-label">How we work</div>
+      <h2 class="process-title">Simple process,<br /><em>zero surprises.</em></h2>
+      <p class="process-sub">From your first message to launch day — here's exactly what to expect.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-node"><span class="step-num-badge">01</span></div>
+        <div class="step-body">
+          <div class="step-duration">~30 min</div>
+          <h3 class="step-title">Discovery Call</h3>
+          <p class="step-desc">A free call to understand your goals, timeline, and budget. No pitch — just an honest conversation about fit.</p>
+        </div>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-node"><span class="step-num-badge">02</span></div>
+        <div class="step-body">
+          <div class="step-duration">1–2 days</div>
+          <h3 class="step-title">Scope & Proposal</h3>
+          <p class="step-desc">A clear written proposal: scope, deliverables, timeline, and fixed price. No vague estimates, no surprise charges.</p>
+        </div>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-node"><span class="step-num-badge">03</span></div>
+        <div class="step-body">
+          <div class="step-duration">1–6 weeks</div>
+          <h3 class="step-title">Design & Build</h3>
+          <p class="step-desc">Weekly updates and a live staging link as we build. Your feedback is incorporated continuously — not just at the end.</p>
+        </div>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-node"><span class="step-num-badge">04</span></div>
+        <div class="step-body">
+          <div class="step-duration">Launch day</div>
+          <h3 class="step-title">Launch & Handoff</h3>
+          <p class="step-desc">We deploy, test everything live, and hand over full source code with docs. 2 weeks of post-launch support included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="faq-inner">
+      <div class="faq-header reveal">
+        <div class="section-label">FAQ</div>
+        <h2 class="faq-title">Questions<br /><em>answered.</em></h2>
+        <p class="faq-sub">Everything clients ask before saying yes.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">How much does a project cost? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Pricing depends entirely on the scope, complexity, and features required for your project. We provide a fixed-price proposal before any work begins — no hourly billing and no unexpected costs.</p></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-q">How long does a project take? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Landing pages: 3–5 days. Full web applications: 2–6 weeks depending on features. We give you a realistic timeline upfront and stick to it.</p></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-q">Do you work with clients outside Egypt? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. We work remotely with clients across the Arab world and internationally. Communication happens over WhatsApp, email, or video call — whatever works for you.</p></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-q">What do I need to provide to get started? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Just a description of what you want to build and any references or examples you like. We'll guide you through the rest — you don't need to be technical.</p></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-q">Will I own the source code? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. Full source code and all assets are yours on final payment. We also provide documentation so any developer can continue the project if needed.</p></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-q">Do you offer maintenance after launch? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>All projects include 2 weeks of free post-launch support. After that we offer affordable monthly maintenance packages — or you can maintain it yourself with the handoff docs.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-glow"></div>
+    <div class="contact-inner">
+      <div class="contact-left reveal">
+        <div class="section-label">Get in touch</div>
+        <h2 class="contact-title">Got a project<br />in <em>mind?</em></h2>
+        <p class="contact-desc">We work with businesses of all sizes — from Cairo startups to regional companies. Tell
+          us what you're building and we'll make it happen.</p>
+        <div class="contact-channels">
+          <a href="https://wa.me/201280550333" class="channel" target="_blank">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </div>
+            <div>
+              <div class="channel-label">WhatsApp</div>
+              <div class="channel-val">+20 128 055 0333</div>
+              
+            </div>
+          </a>
+          
+          <a href="mailto:youssefhusseinnn1@gmail.com" class="channel">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div>
+              <div class="channel-label">Email</div>
+              <div class="channel-val">youssefhusseinnn1@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/youssef-hussein-420297344/" class="channel" target="_blank">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </div>
+            <div>
+              <div class="channel-label">LinkedIn</div>
+              <div class="channel-val">Youssef Mohamed Hussein</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input class="form-input" type="text" id="contact-name" name="name" placeholder="Ahmed Hassan" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input class="form-input" type="email" id="contact-email" name="email" placeholder="ahmed@company.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input class="form-input" type="tel" id="contact-phone" name="phone" placeholder="+20 123 456 7890" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Service</label>
+              <select class="form-input" id="contact-service" name="service" style="cursor:pointer" required>
+                <option value="" disabled selected>What do you need?</option>
+                <option>Web Application</option>
+                <option>Landing Page / Business Website</option>
+                <option>Python Automation</option>
+                <option>UI/UX Branding</option>
+                <option>Something else</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tell us about your project</label>
+            <textarea class="form-textarea" id="contact-message" name="message"
+              placeholder="Describe what you're building or the problem you need solved..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submit-btn">
+            <span id="submit-text">Send message →</span>
+          </button>
+          <p id="form-success"
+            style="display:none;font-family:var(--font-mono);font-size:12px;color:var(--lime);text-align:center;padding:12px;border:1px solid rgba(200,255,0,0.3);">
+            Message sent. We'll reply within 24 hours.
+          </p>
+          <p id="form-error"
+            style="display:none;font-family:var(--font-mono);font-size:12px;color:#FF5F56;text-align:center;padding:12px;border:1px solid rgba(255,95,86,0.3);margin-top:10px;">
+            Oops! Something went wrong. Please try again.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">Vortech<span>.</span></span>
+        <p class="footer-tagline">We build. We secure. We ship.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://wa.me/201280550333" class="footer-social" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </a>
+        <a href="mailto:youssefhusseinnn1@gmail.com" class="footer-social" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/youssef-hussein-420297344/" class="footer-social" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/youssefmohussein" class="footer-social" target="_blank" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Vortech Studio · Cairo, Egypt · All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
